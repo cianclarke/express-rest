@@ -2,15 +2,26 @@
 
 This is a blank 'hello world' FeedHenry MBaaS. Use it as a starting point for building your APIs. 
 
-# Group Hello World API
+# Group Products API
 
-# hello [/hello]
+# product [/product]
 
-'Hello world' endpoint.
+'Product' endpoint.
 
-## hello [POST] 
+## product [GET] 
 
-'Hello world' endpoint.
+'Product' endpoint.
+
++ Response 200 (application/json)
+    + Body
+            [
+              { "some product" : "goes here" },
+              {}
+            ]
+
+## product [POST] 
+
+'Product' endpoint.
 
 + Request (application/json)
     + Body
@@ -23,3 +34,19 @@ This is a blank 'hello world' FeedHenry MBaaS. Use it as a starting point for bu
             {
               "msg": "Hello world"
             }
+
+# individualProduct [/product/{id}]
+
+'Product' endpoint.
+
++ Parameters
+    + id - Id of the product we want
+
+## individualProduct [GET] 
+
+'Product' endpoint.
+
++ Response 200 (application/json)
+    + Body
+            { "some product" : "goes here" },
+          
