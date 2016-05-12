@@ -23,6 +23,7 @@ app.use(express.static(__dirname + '/public'));
 app.use(mbaasExpress.fhmiddleware());
 //app.use(require('./lib/sec.js'));
 app.use('/hello', require('./lib/hello.js'));
+app.use('/product', require('./lib/product.js'));
 
 // Important that this is last!
 app.use(mbaasExpress.errorHandler());
